@@ -1,0 +1,86 @@
+{
+  "global": {
+    "no_permission": "No permission",
+    "registerGuild": "Desculpe, eu precisava registrar este servidor no banco de dados, você pode usar este comando novamente?",
+    "prefixMention": "O meu prefixo neste servidor é {{prefix}}"
+  },
+  "commands": {
+    "gold": {
+      "result": "Você tem {{gold}} ouros!"
+    },
+    "addpost": {
+      "argsIsMissing": ["Uso correto: {{prefix}}addpost <body>"],
+      "invalidBody": "Corpo da mensagem inválido.",
+      "result": "Sucesso!"
+    },
+    "wiki": {
+      "search": {
+        "argsIsMissing": ["Uso correto: {{prefix}}wiki search <nome>"],
+        "loading": "Buscando...",
+        "invalidSearch": "Busca inválida"
+      },
+      "list": {
+        "result": "Lista de postagens: {{posts}}"
+      },
+      "category": {
+        "argsIsMissing": [
+          "Uso correto: {{prefix}}wiki category <nome>\n\nCategorias: {{categories}}"
+        ],
+        "invalidSearch": "Busca inválida"
+      },
+      "invalidOption": "Opção inválida\n\nOpções: {{options}}"
+    },
+    "dashboard": {
+      "argsIsMissing": ["Uso correto: {{prefix}}dashboard set <campo> <valor>"],
+      "invalidPassword": "Senha inválida, o limite de caracteres é 5.",
+      "settings": {
+        "title": "Configurações - {{guild_name}}",
+        "prefix": "Prefixo",
+        "language": "Idioma"
+      },
+      "result": "Sucesso!"
+    },
+    "help": {
+      "sessions": {
+        "index": {
+          "title": "Ajuda",
+          "fields": [
+            {
+              "title": "Comandos",
+              "fields": {
+                  "general": "Geral",
+                  "economy": "Economia"
+              }
+            }
+          ]
+        },
+        "general": {
+            "title": "Geral",
+            "fields": [
+                {
+                    "title": "{{prefix}}help",
+                    "content": "Aqui estamos nós :)"
+                },
+                {
+                    "title": "{{prefix}}wiki",
+                    "content": "Procure por coisas relacionadas ao Stardew Valley com este comando\n\n{{prefix}}**wiki** `[search/list/category]` `(texto)`"
+                },
+                {
+                    "title": "{{prefix}}dashboard",
+                    "content": "Customize do jeito que você bem entender!\n\n{{prefix}}**dashboard** `(set)` `(language/prefix)` `<texto>`"
+                }
+            ]
+        },
+        "economy": {
+            "title": "Economia",
+            "fields": [
+                {
+                    "title": "{{prefix}}gold",
+                    "content": "Cheque sua economia global"
+                }
+            ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "global": {
+    "no_permission": "No permission",
+    "registerGuild": "Sorry, I needed to register this server in the database, can you use this command again?",
+    "prefixMention": "The my prefix is {{prefix}}"
+  },
+  "commands": {
+    "gold": {
+      "result": "You have {{gold}} gold!"
+    },
+    "addpost": {
+      "argsIsMissing": ["Correct usage: {{prefix}}addpost <body>"],
+      "invalidBody": "Invalid body.",
+      "result": "Success!"
+    },
+    "wiki": {
+      "search": {
+        "argsIsMissing": ["Correct usage: {{prefix}}wiki search <name>"],
+        "loading": "Searching...",
+        "invalidSearch": "Invalid search"
+      },
+      "list": {
+        "result": "List of posts: {{posts}}"
+      },
+      "category": {
+        "argsIsMissing": [
+          "Correct usage: {{prefix}}wiki category <name>\n\nCategories: {{categories}}"
+        ],
+        "invalidSearch": "Invalid search"
+      },
+      "invalidOption": "Invalid option\n\nOptions: {{options}}"
+    },
+    "dashboard": {
+      "argsIsMissing": [
+          "Correct usage: {{prefix}}dashboard set <field> <value>"
+      ],
+      "invalidPassword": "Invalid password, character limit is 5.",
+      "settings": {
+        "title": "Settings - {{guild_name}}",
+        "prefix": "Prefix",
+        "language": "Language"
+      },
+      "result": "Success!"
+    },
+    "help": {
+      "sessions": {
+        "index": {
+          "title": "Help",
+          "fields": [
+            {
+              "title": "Commands",
+              "fields": {
+                  "general": "General",
+                  "economy": "Economy"
+              }
+            }
+          ]
+        },
+        "general": {
+            "title": "General",
+            "fields": [
+                {
+                    "title": "{{prefix}}help",
+                    "content": "We are here xD"
+                },
+                {
+                    "title": "{{prefix}}wiki",
+                    "content": "Search for things related to Stardew Valley with this command\n\n{{prefix}}**wiki** `[search/list/category]` `(text)`"
+                },
+                {
+                    "title": "{{prefix}}dashboard",
+                    "content": "Customize it as you see fit!\n\n{{prefix}}**dashboard** `(set)` `(language/prefix)` `<text>`"
+                }
+            ]
+        },
+        "economy": {
+            "title": "Economy",
+            "fields": [
+                {
+                    "title": "{{prefix}}gold",
+                    "content": "Check your global economy"
+                }
+            ]
+        }
+      }
+    }
+  }
+}

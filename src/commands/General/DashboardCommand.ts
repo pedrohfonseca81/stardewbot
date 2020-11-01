@@ -35,7 +35,7 @@ class DashboardCommand {
                             message.channel.send(t("commands.dashboard.result"));
                             break;
                         case "prefix":
-                            if (arg2.length > 5) return message.channel.send(t("commands.dashboard.invalidPassword"))
+                            if (arg2.length > 5) return message.channel.send(t("commands.dashboard.invalidPassword"));
 
                             doc.prefix = arg2;
                             doc.save();
@@ -44,8 +44,8 @@ class DashboardCommand {
                         default:
                             message.channel.send(t("commands.dashboard.argsIsMissing.0", { prefix: doc.prefix }));
                             break;
-                    }
-                }
+                    };
+                };
 
                 if (!arg) {
                     const embed = new MessageEmbed();
@@ -55,10 +55,10 @@ class DashboardCommand {
                     embed.addField(t("commands.dashboard.settings.language"), doc.language.toUpperCase());
 
                     message.channel.send(embed);
-                }
+                };
             };
         });
-    }
+    };
 };
 
 export default DashboardCommand;

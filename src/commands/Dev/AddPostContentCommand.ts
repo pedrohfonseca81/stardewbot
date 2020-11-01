@@ -10,8 +10,8 @@ class AddPostContentCommand {
         this.aliases = [];
 
         this.client = client;
-    }
-    async run({message, args, db }: IRunParams) {
+    };
+    async run({ message, args, db }: IRunParams) {
         if (this.client.mainteners.includes(message.author.id)) {
             const name = args[0];
             if (!name) return message.channel.send("Correct usage: <prefix>addpostcontent <name> <content>");
@@ -30,10 +30,10 @@ class AddPostContentCommand {
                     message.channel.send("Success!");
                 } catch(e) {
                     return message.channel.send("Invalid body");
-                }
+                };
             });
-        }
-    }
-}
+        };
+    };
+};
 
 export default AddPostContentCommand;

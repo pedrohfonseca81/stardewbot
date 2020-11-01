@@ -10,13 +10,13 @@ class AddPostCommand {
         this.aliases = [];
 
         this.client = client;
-    }
+    };
     async run({ message, args, db, t }: IRunParams) {
         if (this.client.mainteners.includes(message.author.id)) {
             let server = await db.Guild.findOne({ id: message.guild?.id });
 
             let code = args.join(" ");
-            if (!code) return message.channel.send(t("commands.addpost.argsIsMissing.0", { prefix: server?.prefix }))
+            if (!code) return message.channel.send(t("commands.addpost.argsIsMissing.0", { prefix: server?.prefix }));
 
             try {
                 const json = JSON.parse(code);
@@ -30,9 +30,9 @@ class AddPostCommand {
                 });
             } catch (e) {
                 return message.channel.send(t("commands.addpost.invalidBody"));
-            }
-        }
-    }
-}
+            };
+        };
+    };
+};
 
 export default AddPostCommand;

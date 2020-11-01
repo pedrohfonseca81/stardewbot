@@ -93,7 +93,7 @@ class WikiCommand {
         if (choices[args[0]]) {
             choices[args[0]](this.client, args);
         } else {
-            message.channel.send(t("commands.wiki.invalidOption", { options: Object.keys(choices).map(e => `\`${e}\``).join(", ") }))
+            message.channel.send(t("commands.wiki.invalidOption", { options: Object.keys(choices).map(e => `\`${e}\``).join(", ") }));
         }
     }
 }

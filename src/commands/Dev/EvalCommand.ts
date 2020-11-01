@@ -19,7 +19,7 @@ class EvalCommand {
 
             if (code.match(/```(.*)```/gs)) {
                 code = code.trim().replace(/```js/gs, "").replace(/```/gs, "");
-            }
+            };
 
             if (code) {
                 const embed = new MessageEmbed();
@@ -29,7 +29,7 @@ class EvalCommand {
 
                     if (debugedCode.toString().match(new RegExp(process.env.DISCORD_TOKEN as string, "gs"))) {
                         debugedCode = debugedCode.replace(new RegExp(process.env.DISCORD_TOKEN as string, "gs"), "IDIOT");
-                    }
+                    };
 
                     embed.setTitle("Eval");
                     embed.addField("Input", `\`\`\`js\n${code}\`\`\``);
@@ -38,12 +38,12 @@ class EvalCommand {
                     message.channel.send(embed);
                 } catch (err) {
                     message.channel.send(`Error: \`${err}\``)
-                }
-            }
+                };
+            };
         } else {
             message.channel.send("No permission");
-        }
-    }
-}
+        };
+    };
+};
 
 export default EvalCommand;

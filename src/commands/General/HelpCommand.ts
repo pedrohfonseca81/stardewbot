@@ -12,7 +12,7 @@ class HelpCommand {
         this.aliases = ["h", "commands", "cmds", "ajuda"]
 
         this.client = client;
-    }
+    };
     async run({ message, db, t }: IRunParams) {
         const guild = await db.Guild.findOne({ id: message.guild?.id });
         const embed = new MessageEmbed();
@@ -28,7 +28,7 @@ class HelpCommand {
 
             const indexReaction = (reaction, user) => {
                 return reaction.emoji.name === '🏠' && user.id === message.author.id;
-            }
+            };
 
             const generalReaction = (reaction, user) => {
                 return reaction.emoji.name === '⚙️' && user.id === message.author.id;
